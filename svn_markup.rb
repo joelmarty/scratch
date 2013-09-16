@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 # coding: utf-8
+#
+# This script adds SVN keyword tags Revision and Date to XML/HTML files, just below the XML header or the DOCTYPE declaration.
+# doctype because that's how our "embedded" html pages need to be.
+# if one of both headers is not detected, it will assume it's XML and add it.
 
 XML_MARKUP = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
 SVN_MARKUP = "<!--\n$Revision$\n$Date$\n-->"
